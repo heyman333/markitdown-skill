@@ -1,12 +1,13 @@
 {
   "name": "markitdown-skill",
   "version": "1.0.0",
-  "description": "Claude Code skills for markitdown — convert any file or URL to Markdown via MCP",
+  "description": "Claude Code skills for markitdown — convert any file or URL to Markdown via MCP. Also supports OpenAI Codex CLI.",
   "license": "MIT",
   "author": "heyman333",
   "type": "commonjs",
   "keywords": [
     "claude-code",
+    "codex-cli",
     "skill",
     "markitdown",
     "mcp",

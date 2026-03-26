@@ -1,21 +1,52 @@
 # markitdown-skill
 
-Claude Code skills for [markitdown](https://github.com/microsoft/markitdown) — convert any file or URL to Markdown using Microsoft's markitdown MCP server.
+Skills for [markitdown](https://github.com/microsoft/markitdown) — convert any file or URL to Markdown using Microsoft's markitdown MCP server.
+
+Supports **Claude Code** and **OpenAI Codex CLI**.
 
 ## Skills
 
 | Skill | Description |
 |-------|-------------|
-| `/markitdown-setup` | Installs `markitdown-mcp` and registers it as an MCP server in Claude Code |
+| `/markitdown-setup` | Installs `markitdown-mcp` and registers it as an MCP server |
 | `/convert <path or URL>` | Converts a file or URL to Markdown |
 
 ## Installation
+
+### Claude Code
 
 ```bash
 npx skills add heyman333/markitdown-skill
 ```
 
-## Usage
+Then run `/markitdown-setup` and restart Claude Code.
+
+### Codex CLI
+
+Codex CLI does not have a skill system, so install manually:
+
+```bash
+pip install markitdown-mcp
+```
+
+Then add to `~/.codex/config.yaml`:
+
+```yaml
+mcpServers:
+  markitdown:
+    command: /path/to/markitdown-mcp
+```
+
+> Replace `/path/to/markitdown-mcp` with the output of `which markitdown-mcp`.
+
+Restart Codex CLI. After that, just ask naturally:
+
+```
+Convert https://example.com to Markdown
+Read this file as Markdown: ~/Downloads/report.pdf
+```
+
+## Usage (Claude Code)
 
 **Step 1** — Set up the MCP server (run once):
 ```
@@ -37,7 +68,7 @@ markitdown supports: PDF, Word (.docx), PowerPoint (.pptx), Excel (.xlsx), image
 ## Requirements
 
 - Python 3.10+
-- Claude Code with MCP support
+- Claude Code with MCP support, or OpenAI Codex CLI with MCP support
 
 ## License
 
