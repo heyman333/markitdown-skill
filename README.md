@@ -65,8 +65,8 @@ Use the `/convert` slash command:
 
 Or just ask naturally — Claude will automatically use the MCP tool:
 ```
-이 PDF 마크다운으로 읽어줘: ~/Downloads/report.pdf
-https://example.com 마크다운으로 해석해줘
+Read this PDF as Markdown: ~/Downloads/report.pdf
+Convert https://example.com to Markdown
 ```
 
 ## Supported Formats
