@@ -55,10 +55,18 @@ Read this file as Markdown: ~/Downloads/report.pdf
 Then restart Claude Code.
 
 **Step 2** — Convert files or URLs:
+
+Use the `/convert` slash command:
 ```
 /convert /path/to/document.pdf
 /convert https://example.com
 /convert ~/Downloads/presentation.pptx
+```
+
+Or just ask naturally — Claude will automatically use the MCP tool:
+```
+이 PDF 마크다운으로 읽어줘: ~/Downloads/report.pdf
+https://example.com 마크다운으로 해석해줘
 ```
 
 ## Supported Formats
