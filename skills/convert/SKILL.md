@@ -1,6 +1,6 @@
 ---
 name: convert
-description: Converts a file path or URL to Markdown using markitdown. Usage: /convert <file-path or URL>
+description: "Converts a file path or URL to Markdown using markitdown. Usage: /convert <file-path or URL>"
 argument-hint: "<file-path or URL>"
 user-invocable: true
 ---
